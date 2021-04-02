@@ -22,7 +22,7 @@ const Navbar = () => {
     }
      
     return (
-        <div className="bg-gray-800 w-full shadow">
+        <div className="bg-gray-800 w-full shadow fixed z-50">
         <div className="flex items-center justify-between w-10/12 md:w-9/12 mx-auto py-3 text-white font-display font-black">
         <Link to="/">
              <img className="max-h-12" src={logo} alt=""/>

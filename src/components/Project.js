@@ -8,7 +8,7 @@ import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
 const Project = (item) => {
 
     return (
-        <div className="text-white font-display w-10/12 sm:w-8/12 md:w-6/12 mx-auto overflow-hidden mt-4 md:mt-16 mb-4 md:mb-16 transition transform duration-500 ease-in-out hover:-translate-y-1 rounded-lg hover:scale-110">
+        <div className="text-white font-display w-10/12 sm:w-8/12 md:w-6/12 mx-auto overflow-hidden mt-4 md:mt-16 mb-4 md:mb-16 transition transform duration-500 ease-in-out hover:-translate-y-1 rounded-lg">
         <h4 className="text-xs py-1 px-2 rounded-t bg-yellow-500 inline uppercase font-bold text-gray-200">{item.category}</h4>
         <img className="" src={item.img} alt=""/>
         <div className="bg-gray-900 p-4">

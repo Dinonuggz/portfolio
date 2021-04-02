@@ -1,16 +1,40 @@
 import React from 'react'
+import CustomSection1 from "./F24/CustomSection1"
+import CustomSection2 from "./F24/CustomSection2"
+import CustomSection3 from "./F24/CustomSection3"
+import CustomSection4 from "./F24/CustomSection4"
+import CustomSection5 from "./F24/CustomSection5"
+import CustomSection6 from "./F24/CustomSection6"
+import Astra1 from "./Astra/Astra1"
+import Astra2 from "./Astra/Astra2"
+import Astra3 from "./Astra/Astra3"
+import Astra4 from "./Astra/Astra4"
+import Astra5 from "./Astra/Astra5"
+import Portfolio1 from "./Portfolio/Portfolio1"
+
+
 
 const CaseSection = (props) => {
-    return (
-        <div className="w-10/12 md:w-9/12 lg:w-8/12 mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8">
-        <h4 className="text-xs text-white py-1 px-2 rounded bg-yellow-500 inline mr-2">{props.id}</h4>
+    const components = [
+        CustomSection1,
+        CustomSection2,
+        CustomSection3,
+        CustomSection4,
+        CustomSection5,
+        CustomSection6,
+        Astra1,
+        Astra2,
+        Astra3,
+        Astra4,
+        Astra5,
+        Portfolio1, 
+    ];
+    const CurrentComponent = components[props.id]
+        return (
+        <div className="w-10/12 md:w-9/12 lg:w-7/12  mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8 leading-loose">
         <h4 className="text-xs text-white py-1 px-2 rounded bg-yellow-500 inline uppercase">{props.tag}</h4>
-        <h2 className="text-lg mt-4 font-bold">{props.name}</h2>
-        <p className="mt-4 leading-relaxed">{props.text}</p>
-        <img className={props.style} src={props.img} alt=""/>
-        <div className="w-full flex items-center justify-center lg:mt-10">
-        <a className={props.link ? "block w-12/12 sm:w-6/12 md:w-6/12 lg:w-4/12 text-center mt-4 bg-green-600 px-7 py-3 text-sm text-white hover:bg-green-400" : ""}href={props.link} target="_blank"  rel="noreferrer">{props.linkText}</a>
-        </div>     
+        <h2 className="text-4xl mb-4 mt-4 font-bold">{props.name}</h2>
+        <CurrentComponent />
         </div>
     )
 }

@@ -33,6 +33,7 @@ const CaseStudy = ({match}) => {
         {projectdata.projects.[sMap + "Data"].map(item => <CaseSection
     key={item.id}
     id={item.id}
+    component={item.component}
     tag={item.tag}
     name={item.name}
     text={item.text}

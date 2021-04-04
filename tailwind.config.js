@@ -193,7 +193,8 @@ module.exports = {
         'monospace',
       ],
       display: ["Raleway"],
-      hero: ["Heebo"]
+      hero: ["Heebo"],
+      paragraph: ["Poppins"],
     },
     fontSize: {
       xs: ['0.75rem', { lineHeight: '1rem' }],

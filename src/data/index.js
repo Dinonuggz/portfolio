@@ -33,9 +33,11 @@ export default {
     projects: {
         title: 'projects',
         projectData:[
-            {id:"f247", category: "Research UX UI", name:"Fitness 24 Seven Redesign", desc: "A redesign of the current app of a popular Scandinavian fitness chain. The objective was to enhance the overall user experience by making the app more useful to all members.", link:"f247",img:f247hero, external:"Live Prototype", ext:"https://www.figma.com/proto/0hdiXgXRgr9iMXYLZ6BCVl/Fitness24%2F7-Redesign?kind=&node-id=626%3A605&scaling=scale-down&viewport=400%2C914%2C0.26390525698661804"},
-            {id:"astra", category: "UI BRANDING FRONT-END", name:"Astra Watches E-Commerce", desc: "Astra Watches is a personal project based on my own watch designs. This project explores e-commerce landing-page designs suitable for the brand image.", link:"astra", img:astrahero, external:"Live Website", ext:"https://astrawatches.netlify.app/" },
-            {id:"portfolio", category: "UI FRONT-END", name:"Portfolio", desc: "This responsive portfolio you're currently viewing was designed, wireframed and ultimately developed using React & Tailwind CSS.", link:"portfolio", img:portfoliohero, external:"Currently viewing!" },
+            {id:"f247", category: "Research UX UI", role: "UX Researcher, UX Designer", year:"2020", name:"Fitness 24 Seven Redesign", desc: "A redesign of the current app of a popular Scandinavian fitness chain by making the app more accessible to all members.", link:"f247",img:f247hero, external:"Live Prototype", ext:"https://www.figma.com/proto/0hdiXgXRgr9iMXYLZ6BCVl/Fitness24%2F7-Redesign?kind=&node-id=626%3A605&scaling=scale-down&viewport=400%2C914%2C0.26390525698661804"},
+
+            {id:"astra", category: "Research UX/UI Development", role: "UX Researcher, UX Designer, Developer", year:"2020-2021", name:"Astra Watches E-Commerce", desc: "Astra Watches is a personal project based on my own watch designs. In this project I worked on logo-design and designed & developed a landing-page concept for it's e-commerce store.", link:"astra", img:astrahero, external:"Live Website", ext:"https://astrawatches.netlify.app/" },
+
+            {id:"portfolio", category: "UX/UI Development",role: "UX Designer, Developer", year:"2021",name:"Portfolio", desc: "This responsive portfolio you're currently viewing was designed, wireframed and ultimately developed using React & Tailwind CSS.", link:"portfolio", img:portfoliohero, external:"Currently viewing!" },
         ],
       }
   };

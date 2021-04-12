@@ -1,5 +1,4 @@
 import React from 'react'
-import profilepic from "../../assets/webpic.png"
 
 const About = () => {
     return (

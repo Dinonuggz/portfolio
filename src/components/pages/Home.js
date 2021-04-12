@@ -24,7 +24,7 @@ const containerVariants = {
 const Home = () => {
    
     return (
-        <motion.div variants={containerVariants} initial="hidden" animate="visible"  exit="exit" className="bg-gradient-to-b from-gray-900 to-gray-800">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible"  exit="exit" className="">
         <Header />
         <Projects />
         <About />

@@ -1,26 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 import {Link} from "react-router-dom"
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faExternalLinkAlt } from '@fortawesome/free-solid-svg-icons'
+import {motion} from "framer-motion"
 
 
 
 const Project = (item) => {
+       const [show, setShow] = useState(false)
 
+ 
     return (
-        <div className="text-white font-display w-10/12 sm:w-8/12 md:w-6/12 mx-auto overflow-hidden mt-4 md:mt-16 mb-4 md:mb-16 transition transform duration-500 ease-in-out hover:-translate-y-1 rounded-lg">
-        <h4 className="text-xs py-1 px-2 rounded-t bg-yellow-500 inline uppercase font-bold text-gray-200">{item.category}</h4>
-        <img className="" src={item.img} alt=""/>
-        <div className="bg-gray-900 p-4">
-        <h3 className="text-xl mb-1 text-red-400 mt-1">{item.name}</h3>
-        <hr className="border-indigo-100 my-2"/>
-         <p className="text-sm text-gray-200 mb-4">{item.desc}</p>
-         <div className="flex justify-between flex-col md:flex-row">
-         <Link className="bg-blue-800 px-7 py-3 text-sm mt-10 md:w-6/12 hover:bg-blue-700 text-center" to={`/${item.link}`}>View Case Study</Link>
-        <a href={item.ext} target="_blank" rel="noreferrer" className="md:w-4/12 text-xs py-2 px-2 flex items-center justify-center mt-6 md:mt-9 cursor-pointer border border-gray-600 text-center hover:bg-gray-800">{item.external}<FontAwesomeIcon icon={faExternalLinkAlt} className={item.ext ? "text-xl ml-6 text-yellow-400" : "text-xl ml-6 text-gray-600"  }/></a>
+
+        <div className=" relative text-white font-display p-2 w-12/12 sm:w-9/12 md:w-8/12 lg:w-6/12 mx-auto flex flex-col overflow-hidden ">
+        <div  className="absolute transition-all duration-500 ease-in-out transform bg-center relative bg-cover h-halfscreen md:rounded-sm" style={{ backgroundImage: `url('${item.icon}')` }} >
+        <div className="hiddenrounded-b-sm absolute bottom-0 right-0 bg-clip-padding py-4 px-4">
+            {item.link ?
+         <Link className="float-right mt-4 block w-44 bg-blue-600 rounded-full font-sans text-sm py-3 px-4 hover:bg-blue-700 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
+        :<p className="float-right mt-4 block w-44 bg-gray-600 rounded-full font-sans text-sm py-3 px-4 hover:bg-blue-700 text-center shadow-md">In Progress</p>}
+         </div>
         </div>
-         <div className="h-4"></div>   
-        </div>
+        <h3 className="text-xl mb-1 font-black text-indigo-600 mt-1">{item.name}</h3>
+         <p className="text-sm text-black">{item.desc}</p>
         </div>
     )
 }

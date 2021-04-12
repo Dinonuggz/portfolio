@@ -10,7 +10,12 @@ import Astra2 from "./Astra/Astra2"
 import Astra3 from "./Astra/Astra3"
 import Astra4 from "./Astra/Astra4"
 import Astra5 from "./Astra/Astra5"
-import Portfolio1 from "./Portfolio/Portfolio1"
+import Playo1 from "./playometric/Playo1"
+import Playo2 from "./playometric/Playo2"
+import Playo3 from "./playometric/Playo3"
+import Playo4 from "./playometric/Playo4"
+import Playo5 from "./playometric/Playo5"
+import Playo6 from "./playometric/Playo6"
 
 
 
@@ -27,7 +32,12 @@ const CaseSection = (props) => {
         Astra3,
         Astra4,
         Astra5,
-        Portfolio1, 
+        Playo1, 
+        Playo2, 
+        Playo3, 
+        Playo4, 
+        Playo5, 
+        Playo6, 
     ];
     const CurrentComponent = components[props.id]
         return (

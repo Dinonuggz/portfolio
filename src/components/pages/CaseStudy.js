@@ -5,7 +5,7 @@ import data from "../../data/index"
 import projectdata from "../../data/projectData"
 import content from "../../data/index"
 import { motion } from 'framer-motion'
-
+import {Link} from "react-router-dom"
 const CaseStudy = ({match}) => {
  
   const DataId = match.params.id
@@ -51,7 +51,9 @@ const CaseStudy = ({match}) => {
         <div className="p-4 mb-2 relative md:h-52">
         <h1 className="text-md mb-2 sm:text-lg lg:text-xl">{item.name}</h1>
         <h2 className="text-sm mb-6 text-gray-300">{item.desc}</h2>
-        <a className="bg-blue-800 px-5 py-2 text-sm inline mb-2 mt-4 bottom-0 md:absolute" href={item.link}>View Case Study</a>
+        {item.link ?
+         <Link className="mt-4 inline w-44 px-5 bottom-0 mb-2  py-2 bg-blue-700 rounded-full font-sans text-sm md:absolute hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
+        :<p className=" mt-4 inline w-44 px-5 py-2 bg-gray-700 bottom-0 mb-2 rounded-full font-sans text-sm md:absolute  text-center shadow-md">In Progress</p>}
         </div>
         
         </div> )}  

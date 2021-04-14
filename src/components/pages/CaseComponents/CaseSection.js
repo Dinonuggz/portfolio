@@ -1,4 +1,8 @@
 import React from 'react'
+import {motion} from "framer-motion"
+import { useInView } from 'react-intersection-observer';
+import {useEffect} from "react"
+import {useAnimation} from "framer-motion"
 import CustomSection1 from "./F24/CustomSection1"
 import CustomSection2 from "./F24/CustomSection2"
 import CustomSection3 from "./F24/CustomSection3"
@@ -16,6 +20,7 @@ import Playo3 from "./playometric/Playo3"
 import Playo4 from "./playometric/Playo4"
 import Playo5 from "./playometric/Playo5"
 import Playo6 from "./playometric/Playo6"
+
 
 
 
@@ -39,13 +44,35 @@ const CaseSection = (props) => {
         Playo5, 
         Playo6, 
     ];
+    const {ref, inView} = useInView({
+        threshold: 0.1
+    });
+    const animation =useAnimation();
+
+    useEffect(() => {
+        if(inView){
+        animation.start({
+           x:0,
+           opacity:1,
+           transition: {
+               type:"spring", duration:1,
+           } 
+        })   
+        }
+        if(!inView){
+            animation.start({x:-20, opacity:0.5})
+        }
+       
+    },[inView])
+
     const CurrentComponent = components[props.id]
         return (
-        <div className="w-10/12 md:w-9/12 lg:w-7/12  mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8 leading-loose">
-        <h4 className="text-xs text-white py-1 px-2 rounded bg-yellow-500 inline uppercase">{props.tag}</h4>
+        <motion.div ref={ref}  animate={animation}  className="w-10/12 md:w-9/12 lg:w-7/12  mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8 leading-loose">
+        <h4 className={inView ? "text-xs text-white py-1 px-2 rounded bg-yellow-500 inline uppercase":"text-xs text-white py-1 px-2 rounded bg-gray-500 inline uppercase"}>{props.tag}</h4>
         <h2 className="text-4xl mb-4 mt-4 font-bold">{props.name}</h2>
         <CurrentComponent />
-        </div>
+        </motion.div>
+       
     )
 }
 

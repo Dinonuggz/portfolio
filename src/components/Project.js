@@ -27,7 +27,7 @@ const Project = (item) => {
             animation.start({scale:0.95, opacity:0.5, borderRadius:"5%",})
         }
        
-    },[inView])
+    },[inView,animation])
 
  
     return (

@@ -28,7 +28,7 @@ const About = () => {
             animation.start({scale:0.95, opacity:0})
         }
        
-    },[inView])
+    },[inView,animation])
 
  
     return (

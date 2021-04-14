@@ -62,8 +62,8 @@ const CaseSection = (props) => {
         if(!inView){
             animation.start({x:-20, opacity:0.5})
         }
-       
-    },[inView])
+        
+    },[inView, animation])
 
     const CurrentComponent = components[props.id]
         return (

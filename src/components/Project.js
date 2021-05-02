@@ -41,7 +41,11 @@ const Project = (item) => {
         :<p className="cursor-pointer float-right mt-4 block w-44 bg-gray-600 rounded-full font-sans text-sm py-3 px-4 text-center shadow-md">In Progress</p>}
          </div>
         </motion.div>
+        <div className="flex items-center">
         <h3 className="text-xl mb-1 font-black text-indigo-600 mt-1">{item.name}</h3>
+        <p className="bg-yellow-400 text-xs md:text-sm ml-2 px-2 rounded-full text-center hidden sm:block">{item.category[0]}</p>
+        <p className="bg-yellow-400 text-xs md:text-sm ml-2 px-2 rounded-full text-center hidden sm:block">{item.category[1]}</p>
+        </div>
          <p className="text-sm text-black">{item.desc}</p>
         </div>
     )

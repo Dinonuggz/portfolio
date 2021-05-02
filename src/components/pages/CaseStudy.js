@@ -46,14 +46,14 @@ const CaseStudy = ({match}) => {
     <h2 className="text-xl text-gray-900 sm:text-2xl md:text-4xl font-bold mb-2 mt-2 xs:mt-4 sm:mt-4 md:mt-8">Want to see more?</h2>
     </div>
     <div className="grid md:grid-cols-2 lg:grid-cols-2 gap-8 w-10/12 md:w-8/12 mx-auto text-white mb-4 md:mb-12">
-     {filt.map(item => <div key={item.id} className="bg-gray-900">
+     {filt.slice(0,2).map(item => <div key={item.id} className="bg-gray-900">
         <img src={item.img} alt=""/>
         <div className="p-4 mb-2 relative md:h-52">
         <h1 className="text-md mb-2 sm:text-lg lg:text-xl">{item.name}</h1>
         <h2 className="text-sm mb-6 text-gray-300">{item.desc}</h2>
         {item.link ?
-         <Link className="mt-4 inline w-44 px-5 bottom-0 mb-2  py-2 bg-blue-700 rounded-full font-sans text-sm md:absolute hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
-        :<p className=" mt-4 inline w-44 px-5 py-2 bg-gray-700 bottom-0 mb-2 rounded-full font-sans text-sm md:absolute  text-center shadow-md">In Progress</p>}
+         <Link className="mt-4 inline w-44 px-5 bottom-0 mb-2  py-2 bg-blue-700 font-sans text-sm md:absolute hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
+        :<p className=" mt-4 inline w-44 px-5 py-2 bg-gray-700 bottom-0 mb-2 font-sans text-sm md:absolute  text-center shadow-md">In Progress</p>}
         </div>
         
         </div> )}  

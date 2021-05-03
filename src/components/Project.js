@@ -17,14 +17,13 @@ const Project = (item) => {
         animation.start({
            scale:1,
            opacity:1,
-           borderRadius:"0%",
            transition: {
                type:"spring", duration:1,
            } 
         })   
         }
         if(!inView){
-            animation.start({scale:0.95, opacity:0.5, borderRadius:"5%",})
+            animation.start({scale:0.95, opacity:0.5,})
         }
        
     },[inView,animation])
@@ -37,8 +36,8 @@ const Project = (item) => {
      className="absolute bg-center relative bg-cover h-halfscreen md:rounded-sm" style={{ backgroundImage: `url('${item.icon}')` }} >
         <div className="hiddenrounded-b-sm absolute bottom-0 right-0 bg-clip-padding py-4 px-4">
             {item.link ?
-         <Link className="float-right mt-4 block w-44 bg-blue-700 rounded-full font-sans text-sm py-3 px-4 hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
-        :<p className="cursor-pointer float-right mt-4 block w-44 bg-gray-600 rounded-full font-sans text-sm py-3 px-4 text-center shadow-md">In Progress</p>}
+         <Link className="float-right mt-4 block w-44 bg-blue-700 rounded-full font-hero font-sans text-sm py-3 px-4 hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>
+        :<p className="cursor-pointer float-right mt-4 block w-44 bg-gray-600 font-hero rounded-full font-sans text-sm py-3 px-4 text-center shadow-md">In Progress</p>}
          </div>
         </motion.div>
         <div className="flex items-center">

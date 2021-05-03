@@ -22,7 +22,7 @@ export default {
         projectData:[
             {id:"f247", category: ["UX/UI"], role: "UX Researcher, UX Designer", year:"2020", name:"Fitness 24 Seven Redesign", desc: "A redesign of the current app of a popular Scandinavian fitness chain by making the app more accessible to all members.", link:"f247",img:f247hero,icon:f247hero, external:"Live Prototype", ext:"https://www.figma.com/proto/0hdiXgXRgr9iMXYLZ6BCVl/Fitness24%2F7-Redesign?kind=&node-id=626%3A605&scaling=scale-down&viewport=400%2C914%2C0.26390525698661804"},
 
-            {id:"astra", category: ["UX/UI", "Development"], role: "UX Researcher, UX Designer, Developer", year:"2020-2021", name:"Astra Watches E-Commerce", desc: "Conceptual logo-design and a designed & developed landing-page concept for an watch e-commerce store.", link:"astra", img:astrahero,icon:astrahero, external:"Live Website", ext:"https://astrawatches.netlify.app/" },
+            {id:"astra", category: ["UX/UI", "Development"], role: "UX Researcher, UX Designer, Developer", year:"2020-2021", name:"Astra Watches E-Commerce", desc: "Conceptual logo-design and landing-page concept for an watch e-commerce store. Developed using React & tailwind CSS.", link:"astra", img:astrahero,icon:astrahero, external:"Live Website", ext:"https://astrawatches.netlify.app/" },
 
             {id:"playo", category: ["Interaction Design", "Industrial Design"],role: "Industrial Designer, Interaction designer", year:"2019",name:"Play.ometric", desc: "A university interaction design project where I designed an inclusive interactive jumping exercise for high-schoolers based on gamification & nudging. ", link:"playo", img:playometrichero,icon:playohero, external:"" },
 

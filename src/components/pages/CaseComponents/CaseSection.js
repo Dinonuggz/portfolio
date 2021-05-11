@@ -24,7 +24,7 @@ import Playo6 from "./playometric/Playo6"
 
 
 
-const CaseSection = (props) => {
+const CaseSection = ({item}) => {
     const components = [
         CustomSection1,
         CustomSection2,
@@ -65,11 +65,11 @@ const CaseSection = (props) => {
         
     },[inView, animation])
 
-    const CurrentComponent = components[props.id]
+    const CurrentComponent = components[item.id]
         return (
         <motion.div ref={ref}  animate={animation}  className="w-10/12 md:w-9/12 lg:w-7/12  mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8 leading-loose">
-        <h4 className={inView ? "text-xs text-white py-1 px-2 rounded bg-yellow-500 inline uppercase":"text-xs text-white py-1 px-2 rounded bg-gray-500 inline uppercase"}>{props.tag}</h4>
-        <h2 className="text-4xl mb-4 mt-4 font-bold">{props.name}</h2>
+        <h4 className={inView ? "text-xs text-white py-1 px-2 rounded bg-yellow-500 inline uppercase":"text-xs text-white py-1 px-2 rounded bg-gray-500 inline uppercase"}>{item.tag}</h4>
+        <h2 className="text-4xl mb-4 mt-4 font-bold">{item.name}</h2>
         <CurrentComponent />
         </motion.div>
        

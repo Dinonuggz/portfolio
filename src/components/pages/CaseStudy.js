@@ -32,15 +32,7 @@ const CaseStudy = ({match}) => {
         <CaseHeader index={index} dataArray={dataArray}/>
         {projectdata.projects.[sMap + "Data"].map(item => <CaseSection
     key={item.id}
-    id={item.id}
-    component={item.component}
-    tag={item.tag}
-    name={item.name}
-    text={item.text}
-    img={item.img}
-    style={item.style}
-    link={item.link}
-    linkText={item.linkText}/>)}
+    item={item}/>)}
     <hr className=" mx-4 md:mx-12 lg:mx-20 mb-4 md:mb-8"/>
     <div className="w-10/12 md:w-9/12 lg:w-8/12 mx-auto py-3 mb-2 xs:mb-4 sm:mb-2 md:mb-8 mt-2 xs:mt-4 sm:mt-4 md:mt-8">
     <h2 className="text-xl text-gray-900 sm:text-2xl md:text-4xl font-bold mb-2 mt-2 xs:mt-4 sm:mt-4 md:mt-8">Want to see more?</h2>

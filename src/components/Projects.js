@@ -14,16 +14,7 @@ const Projects = () => {
         {content.projects.projectData.map(item => 
         <Project 
         key={item.id}
-        name={item.name}
-        desc={item.desc}
-        role={item.role}
-        year={item.year}
-        category={item.category}
-        link={item.link}
-        img={item.img}
-        icon={item.icon}
-        external={item.external}
-        ext={item.ext}
+        item={item}
         />)} 
         </div>
         </div>

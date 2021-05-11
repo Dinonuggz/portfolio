@@ -7,7 +7,7 @@ ___
 
 ## Used libraries
 
-*React router
-*React scroll
-*Framer motion
-*Font awesome
+* React router
+* React scroll
+* Framer motion
+* Font awesome

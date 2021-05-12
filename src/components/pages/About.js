@@ -32,7 +32,7 @@ const About = () => {
 
  
     return (
-        <motion.div ref={ref} animate={animation} id="about" className="flex flex-col items-center justify-center font-hero font-black text-white w-10/12 md:w-6/12 mx-auto mt-16 ">
+        <motion.div ref={ref} animate={animation} id="about" className="flex flex-col items-center justify-center font-hero font-black text-white w-10/12 md:w-6/12 mx-auto mt-4 lg:mt-12 ">
              <hr className="w-8/12 mb-4"/>
             <div>
          <h2 className="text-lg text-gray-400 sm:text-lg md:text-xl lg:text-xl xl:text-3xl mb-4 leading-loose">

@@ -1,6 +1,7 @@
 import React from 'react'
 import content from "../data/index"
 import {motion} from "framer-motion"
+import {Link as Link1} from "react-scroll"
 import webpic from "../assets/webpic.png"
 
 const containerVariants = {
@@ -15,19 +16,6 @@ const containerVariants = {
         }
     }
 }
-const childVariants = {
-    hidden: {
-     y:-500,  
-    },
-    visible:{
-       y:0,
-       transition: {
-           type: "spring",
-           damping: 10
-           
-       }
-        }
-    }
 
 const buttonVariants = {
     hover: {
@@ -44,20 +32,16 @@ const Header = () => {
     
 
     return (
-        <div className="mb-8 md:mb-0 pt-16 pb-20 bg-gray-50">
-        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="flex flex-col md:flex-row items-start justify-between sm:pt-8 md:pt-16 font-hero font-black text-black w-10/12 md:w-9/12 mx-auto">
-            <div  className="text-left">
-            <h1 className="text-4xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl mt-8 md:mt-1 lg:mt-12 md:mb-4">{content.header.text[0]} {content.header.text[1]}</h1>
-            <h1 className="text-xl text-left text-green-500 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl mt-2 md:mt-4">UX/UI designer & Front-end developer with <br></br><span className="text-green-500">Industrial design background</span></h1>
-            <motion.a variants ={buttonVariants} whileHover="hover" className="mt-8 md:mt-12 text-white w-44 text-center block rounded-full bg-blue-500 px-10 py-4 text-sm" 
-            href= "mailto: adriantimothypetersson@gmail.com">Get in touch</motion.a>
+        <div className="mb-8 md:mb-0 pt-16">
+        <motion.div variants={containerVariants} initial="hidden" animate="visible" className="flex flex-col lg:flex-row items-start justify-between  sm:pt-8 md:pt-16 font-hero font-black text-black w-10/12 md:w-9/12 mx-auto">
+            <div  className="w-full text-center lg:text-left flex flex-col items-center lg:items-start lg:justify-between">
+            <h1 className="text-center lg:text-left text-4xl sm:text-3xl md:text-3xl lg:text-4xl xl:text-6xl 2xl:text-8xl 3xl:text-9xl mt-8 md:mt-1 lg:mt-12 lg:mb-4">{content.header.text[0]} {content.header.text[1]}</h1>
+            <h2 className="text-center md:text-left text-lg rounded-md md:inline p-2 text-left bg-green-500 text-gray-100 sm:text-lg md:text-xl lg:text-2xl xl:text-3xl 3xl:text-5xl mt-4 md:mt-4">UX/UI designer & Front-end developer </h2>
+            <Link1 to="work" smooth={true} duration={1000} className="cursor-pointer">
+            <motion.button variants ={buttonVariants} animate="hover" className=" focus:outline-none mt-8 md:mt-12 text-white w-44 text-center block rounded-full bg-blue-500 px-10 py-4 text-sm" 
+            >View projects</motion.button></Link1>
             </div>
-            <motion.div variants={childVariants} drag className="mr-16 hidden md:block w-6/12 md:w-4/12 2xl:w-4/12"><motion.img className="cursor-pointer" drag  dragConstraints={{
-      top: -50,
-      left: -50,
-      right: 50,
-      bottom: 50,
-    }} src={webpic} alt=""/></motion.div>
+            <img className="hidden lg:block md:w-2/5" src={webpic} alt=""/>
             
           
         </motion.div>

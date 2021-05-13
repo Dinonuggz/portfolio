@@ -4,6 +4,14 @@ import portfoliohero from "../assets/portfoliohero.png"
 import playometrichero from "../assets/playometrichero.png"
 import playohero from "../assets/playohero.png"
 import advancedtitlehero from "../assets/advancedtitlehero.png"
+import figma from "../assets/svgs/figma.svg"
+import illustrator from "../assets/svgs/adobeillustrator.svg"
+import photoshop from "../assets/svgs/adobephotoshop.svg"
+import ae from "../assets/svgs/adobeaftereffects.svg"
+import js from "../assets/svgs/javascript.svg"
+import ract from "../assets/svgs/react.svg"
+import tailwind from "../assets/svgs/tailwindcss.svg"
+
 /* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
     header: {
@@ -31,5 +39,8 @@ export default {
 
             {id:"advtitle", category: ["Development"],role: "Developer", year:"2021",name:"Advanced Title Search ++", desc: "Generates movie suggestions based on ratings, year & genre. Fetches data from two API's, built using React.", link:"",icon:advancedtitlehero, external:"Live Website", ext:"https://advancedtitlesearch.netlify.app/",github:"https://github.com/adrianpetersson/advancedtitlesearch" }
         ],
-      }
+      },
+      stack: {
+        icons:[{img:figma, text:"Figma"},{img:illustrator, text:"Illustrator"},{img:photoshop, text:"Photoshop"},{img:ae, text:"AEffects"},{img:js, text:"JavaScript"},{img:ract, text:"React"},{img:tailwind, text:"TailwindCSS"}]
+       },
   };

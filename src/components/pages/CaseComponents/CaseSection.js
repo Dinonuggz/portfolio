@@ -45,7 +45,8 @@ const CaseSection = ({item}) => {
         Playo6, 
     ];
     const {ref, inView} = useInView({
-        threshold: 0.1
+        threshold: 0.1,
+        triggerOnce:true
     });
     const animation =useAnimation();
 

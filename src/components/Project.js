@@ -8,15 +8,18 @@ import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import {useAnimation} from "framer-motion"
 
 
-const Project = ({item}) => {
+const Project = ({item,index}) => {
     const {ref, inView} = useInView({
-        threshold: 0.5
+        threshold: 0.5,
+        triggerOnce:true
+       
     });
     const animation =useAnimation();
-
-    useEffect(() => {
+        console.log(window.scrollposition)
+  
         if(inView){
         animation.start({
+            x:0,
            scale:1,
            opacity:1,
            transition: {
@@ -24,11 +27,13 @@ const Project = ({item}) => {
            } 
         })   
         }
-        if(!inView){
-            animation.start({scale:0.95, opacity:0.5,})
+        if(!inView && index % 2 !== 0){
+            animation.start({scale:0.95, opacity:0.3,x:50})
+        } else if(!inView && index % 2 ===0){
+            animation.start({scale:0.95, opacity:0.3,x:-50})
         }
        
-    },[inView,animation])
+ 
 
        
     

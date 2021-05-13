@@ -12,10 +12,11 @@ const Projects = () => {
         </div>
         <div className="mt-8 lg:mt-16 flex items-center justify-center">
         <div className="flex flex-wrap w-12/12 md:w-11/12 xl:w-9/12 -mt-8">
-        {content.projects.projectData.map(item => 
+        {content.projects.projectData.map((item,index) => 
         <Project 
         key={item.id}
         item={item}
+        index={index}
         />)} 
         </div>
         </div>

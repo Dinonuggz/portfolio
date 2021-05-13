@@ -2,7 +2,6 @@ import React from 'react'
 import {Link} from "react-router-dom"
 import {motion} from "framer-motion"
 import { useInView } from 'react-intersection-observer';
-import {useEffect} from "react"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faGithubSquare } from '@fortawesome/free-brands-svg-icons'
 import {useAnimation} from "framer-motion"

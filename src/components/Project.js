@@ -14,7 +14,7 @@ const Project = ({item,index}) => {
        
     });
     const animation =useAnimation();
-        console.log(window.scrollposition)
+
   
         if(inView){
         animation.start({

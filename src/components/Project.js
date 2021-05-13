@@ -44,7 +44,7 @@ const Project = ({item,index}) => {
           {item.github && 
           <a href={item.github} target="_blank"  rel="noreferrer"><FontAwesomeIcon className="float-right p-2 hover:text-green-500" color="green" size="4x" icon={faGithubSquare} /></a> 
           } 
-        <div className="hiddenrounded-b-sm absolute bottom-0 right-0 bg-clip-padding py-4 px-4">
+        <div className="rounded-b-sm absolute bottom-0 right-0 bg-clip-padding py-4 px-4">
             {item.link &&
          <Link className="float-right mt-4 block w-44 bg-blue-700 rounded-full font-hero font-sans text-sm py-3 px-4 hover:bg-blue-600 text-center shadow-md" to={`/${item.link}`}>View Case Study</Link>}
         <a href={item.ext} className={item.ext ? " mr-2 float-right mt-4 block w-30 bg-green-600 rounded-full font-hero font-sans text-sm py-3 px-4 hover:bg-green-500 text-center shadow-md" : "hidden"}  target="_blank"  rel="noreferrer">{item.external}</a>

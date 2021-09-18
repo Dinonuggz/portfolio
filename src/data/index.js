@@ -33,7 +33,7 @@ export default {
 
             {id:"astra", sortby:["all","ux","dev"], category: ["UX/UI", "Development"], role: "UX Researcher, UX Designer, Developer", year:"2020-2021", name:"Astra Watches E-Commerce", desc: "Conceptual logo-design and landing-page concept for an watch e-commerce store. Developed using React & tailwind CSS.", link:"astra", img:astrahero,icon:astrahero, external:"Live Website", ext:"https://astrawatches.netlify.app/",github:"https://github.com/adrianpetersson/astraecommerce" },
 
-            {id:"playo",sortby:["all","ux"],category: ["Interaction Design", "Industrial Design"],role: "Industrial Designer, Interaction designer", year:"2019",name:"Play.ometric", desc: "A university interaction design project where I designed an inclusive interactive jumping exercise for high-schoolers based on gamification & nudging. ", link:"playo", img:playometrichero,icon:playohero, external:"" },
+            {id:"playo",sortby:["all","ux"],category: ["Interaction Design", "Industrial Design"],role: "Industrial Designer, Interaction designer", year:"2019",name:"Play.ometric", desc: "University interaction design project where I designed an inclusive jumping exercise for high-schoolers based on gamification using arduino. ", link:"playo", img:playometrichero,icon:playohero, external:"" },
 
             {id:"portfolio",sortby:["all","dev"], category: ["UX/UI", "Development"],role: "UX Designer, Developer", year:"2021",name:"Portfolio", desc: "This responsive portfolio you're currently viewing was designed, wireframed and ultimately developed using React & Tailwind CSS.", link:"", img:portfoliohero,icon:portfoliohero, external:"Currently viewing!",github:"https://github.com/adrianpetersson/portfolio" },
 

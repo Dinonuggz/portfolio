@@ -6,6 +6,7 @@ import projectdata from "../../data/projectData"
 import content from "../../data/index"
 import { motion } from 'framer-motion'
 import {Link} from "react-router-dom"
+
 const CaseStudy = ({match}) => {
  
   const DataId = match.params.id
